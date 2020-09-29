@@ -79,10 +79,18 @@ with open(budget_data) as csvfile:
     #get key value associated with min and max
 
     key_min = list(budget_dict.keys())[list(budget_dict.values()).index(minvalue)]
-    print(key_min)
+    #print(key_min)
 
     key_max = list(budget_dict.keys())[list(budget_dict.values()).index(maxvalue)]
-    print(key_max)
+    #print(key_max)
+
+    #convert results to currency as applicable and print results to terminal
+    print("Total Months = " + str(num_months))
+    print("Total Profit/Loss = " + "${}".format(Profit_Loss_Tot))
+    print("Average Change = " + "${}".format(Avg_Change))
+    print("Greatest Increase in Profits = " + str(key_max) + " ("+ "${}".format(maxvalue) +")")
+    print("Greatest Decrease in Profits = " + str(key_min) + " ("+ "${}".format(minvalue) +")")
+
 
     
     
