@@ -84,22 +84,36 @@ with open(budget_data) as csvfile:
     key_max = list(budget_dict.keys())[list(budget_dict.values()).index(maxvalue)]
     #print(key_max)
 
-    #convert results to currency as applicable and print results to terminal
+    #apply formatting to monetary values: 
+    Profit_Loss_Tot = "${}".format(Profit_Loss_Tot)
+    Avg_Change = "${}".format(Avg_Change)
+    maxvalue = "${}".format(maxvalue)
+    minvalue = "${}".format(minvalue)
+    
+
+
+    #print results to terminal
     print("Total Months = " + str(num_months))
-    print("Total Profit/Loss = " + "${}".format(Profit_Loss_Tot))
-    print("Average Change = " + "${}".format(Avg_Change))
-    print("Greatest Increase in Profits = " + str(key_max) + " ("+ "${}".format(maxvalue) +")")
-    print("Greatest Decrease in Profits = " + str(key_min) + " ("+ "${}".format(minvalue) +")")
+    print("Total Profit/Loss = " + str(Profit_Loss_Tot))
+    print("Average Change = " + str(Avg_Change))
+    print("Greatest Increase in Profits = " + str(key_max) + " ("+ (maxvalue) +")")
+    print("Greatest Decrease in Profits = " + str(key_min) + " ("+ (minvalue) +")")
+
+
+#print results to textfile
+with open(os.path.join('Analysis', 'Financial_Results.txt'), "w") as text_file:
+    text_file.write("Financial Analysis\n")
+    text_file.write("--------------------------\n")
+    text_file.write("Total Months = " + str(num_months) + '\n')
+    text_file.write("Total Profit/Loss = " + str(Profit_Loss_Tot) + '\n')
+    text_file.write("Average Change = " + str(Avg_Change) + '\n')
+    text_file.write("Greatest Increase in Profits = " + str(key_max) + " ("+ (maxvalue) +")\n")
+    text_file.write("Greatest Decrease in Profits = " + str(key_min) + " ("+ (minvalue) +")\n")
+    text_file.flush()
+    text_file.close()
 
 
     
     
 
-   
-    
-    
-   
-
-
-   
 
