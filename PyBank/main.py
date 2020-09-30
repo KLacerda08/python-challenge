@@ -92,12 +92,14 @@ with open(budget_data) as csvfile:
     
 
 
-    #print results to terminal
-    print("Total Months = " + str(num_months))
-    print("Total Profit/Loss = " + str(Profit_Loss_Tot))
-    print("Average Change = " + str(Avg_Change))
-    print("Greatest Increase in Profits = " + str(key_max) + " ("+ (maxvalue) +")")
-    print("Greatest Decrease in Profits = " + str(key_min) + " ("+ (minvalue) +")")
+#print results to terminal
+print("Financial Analysis")
+print("--------------------------")
+print("Total Months = " + str(num_months))
+print("Total Profit/Loss = " + str(Profit_Loss_Tot))
+print("Average Change = " + str(Avg_Change))
+print("Greatest Increase in Profits = " + str(key_max) + " ("+ (maxvalue) +")")
+print("Greatest Decrease in Profits = " + str(key_min) + " ("+ (minvalue) +")")
 
 
 #print results to textfile
