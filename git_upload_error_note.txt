@@ -1,6 +1,8 @@
 Note - Error in Uploading
 
 I encountered an error trying to push commits to git hub on 9/29/2020, after several successful pushes over the past few days on the same repo.  
+(see git_upload.error.png)
+
 I tried starting again from a fresh git bash terminal, and noted the following error: 
 "Your branch is ahead of 'origin/master' by 1 commit.(use "git push" to publish your local commits)".  
 
