@@ -1,0 +1,31 @@
+Note - Error in Uploading
+
+I encountered an error trying to push commits to git hub on 9/29/2020, after several successful pushes over the past few days on the same repo.  
+I tried starting again from a fresh git bash terminal, and noted the following error: 
+"Your branch is ahead of 'origin/master' by 1 commit.(use "git push" to publish your local commits)".  
+
+I tried git push again but got the same error as previous.  
+
+I did not know what caused the error, but had a few theories: 
+- I recall committing something in error, and not pushing it. 
+- I reorganized some files in a way that might have been confusing.  Specifically: 
+* I added a readme file to the main branch (python-challenge) using the git hub website, but did not create
+	the same readme file locally;
+* I moved a readme file locally into a sub-directory.  
+
+I was not able to determine exactly what caused the error, but through a Google search, after a few unsuccessful attempts, I found the following fix:  
+* git reset HEAD^ --hard  (this reset my remote repo to the last commit)
+* git pull (before executing, I backed up my local repo first, since I did not want to overwrite it)
+
+I then overwrote my local repo with the backed up version, and re-attemted the commit (git add, git status, git commit, git push). 
+I was able to load the files succesfully to my remote repo. The troubleshoot took about 50 minutes, and the repo was updated on 9/30/2020.
+Due to these issues, the assignment was submitted approximately 45 minutes late. 
+
+What I learned:  
+* Be very careful when using git commands - do not commit unless you intend to finish the process.
+* Try not to make changes through the git hub site, even if it is just to add a readme file.  Make all changes locally then push them.
+(I really did not think adding a simple readme file the to the remote repo would cause an error, but maybe it did).  
+
+
+
+
